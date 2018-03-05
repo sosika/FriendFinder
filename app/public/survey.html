@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Friend Finder</title>
+  <!-- Latest compiled and minified CSS & JS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/bootstrap-select.min.js"></script>
+
+  <!-- (Optional) Latest compiled and minified JavaScript translation files -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/i18n/defaults-*.min.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="page-header">
+      <h1>Survey Questions</h1>      
+    </div>
+    <h2>About You</h2>      
+    
+    <div class="form-group">
+      <label for="name">Name (Required)</label>
+      <input type="text" class="form-control" id="name" placeholder="name">
+    </div>
+
+    <div class="form-group">
+      <label for="link">Link to Photo Image (Required)</label>
+      <input type="text" class="form-control" id="photo" placeholder="link">
+    </div>
+
+    <hr>
+    
+    <h3><strong>Question 1</strong></h3>
+      <h4>You are almost never late for your appointments.</h4>
+    <select class="selectpicker" id="q1">
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+
+    <h3><strong>Question 2</strong></h3>
+      <h4>You like to be engaged in an active and fast-paced job.</h4>
+    <select class="selectpicker" id="q2">
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+
+    <h3><strong>Question 3</strong></h3>
+      <h4>You enjoy having a wide circle of acquaintances.</h4>
+    <select class="selectpicker" id="q3">
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+
+    <h3><strong>Question 4</strong></h3>
+      <h4>You feel involved when watching TV soaps.</h4>
+    <select class="selectpicker" id="q4">
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+
+    <h3><strong>Question 5</strong></h3>
+      <h4>You are usually the first to react to a sudden event: the telephone ringing or unexpected question.</h4>
+    <select class="selectpicker" id="q5">
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+
+    <h3><strong>Question 6</strong></h3>
+      <h4>You feel that the world is founded on compassion.</h4>
+    <select class="selectpicker" id="q6">
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+
+    <h3><strong>Question 7</strong></h3>
+      <h4>You think that everything in the world is relative.</h4>
+    <select class="selectpicker" id="q7">
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+
+    <h3><strong>Question 8</strong></h3>
+      <h4>Strict observance of the established rules is likely to prevent attaining a good outcome.</h4>
+    <select class="selectpicker" id="q8">
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+
+    <h3><strong>Question 9</strong></h3>
+      <h4>It is difficult to get you excited.</h4>
+    <select class="selectpicker" id="q9">
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+
+    <h3><strong>Question 10</strong></h3>
+      <h4>When making a decision, you rely more on your feelings than on analysis of the situation.</h4>
+    <select class="selectpicker" id="q10">
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+
+  <hr>
+    
+
+    
+    <button type="submit" class="btn-primary btn-lg" id="submit">Submit</button>
+
+  </form>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Best Match</h4>
+        </div>
+        <div class="modal-body">
+          <div id="matchName"></div>
+          <div id="matchPhoto"></div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<br><br>
+
+  <footer><a href="/api/friends">API Friend List</a> | <a href="">Github Repo</a></footer>
+</div>  
+
+
+
+<script type="text/javascript">
+
+    jQuery.ajaxSettings.traditional = true;
+
+    $("#submit").on("click", function(event) {
+      console.log('you clicked submit');
+      event.preventDefault();
+
+      var newSurvey = {
+        name: $("#name").val().trim(),
+        photo: $("#photo").val().trim(),
+        scores: [
+
+            $('#q1.selectpicker option:selected').val().trim(),
+            $('#q2.selectpicker option:selected').val().trim(),
+            $('#q3.selectpicker option:selected').val().trim(),
+            $('#q4.selectpicker option:selected').val().trim(),
+            $('#q5.selectpicker option:selected').val().trim(),
+            $('#q6.selectpicker option:selected').val().trim(),
+            $('#q7.selectpicker option:selected').val().trim(),
+            $('#q8.selectpicker option:selected').val().trim(),
+            $('#q9.selectpicker option:selected').val().trim(),
+            $('#q10.selectpicker option:selected').val().trim(),
+        ]
+      };
+      
+      console.log(newSurvey.scores);
+
+      $.post("/api/friends", newSurvey)
+      .then(function(data) {
+        console.log(data);
+        $(document).ready(function() {
+
+          $("#myModal").modal({show: true});
+
+          var h2Name = $("<h4>");
+          h2Name = "<h4>" + "Name: " + data.name + "<h4>";
+          $("#matchName").append(h2Name);
+
+          var image = $("<img>");
+          image.attr("src", data.photo);
+          $("#matchPhoto").append(image);
+        });
+
+      });
+    });
+
+</script>
+  
+
+</body>
+</html>
+
