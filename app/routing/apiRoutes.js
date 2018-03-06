@@ -2,14 +2,13 @@ var express = require("express");
 var router = express.Router();
 var path = require("path");
 var friends = require("../data/friends.js");
-var newSurvey = {};
 
 //=============================================================
 //      Matching Function
 //=============================================================
 
 function getBestMatch (newSurvey, friends) {
-  console.log('inside function');
+  
   var matchResultsArray = [];
   var smallestTotal = null;
   var originalMatchResults = null;
@@ -20,13 +19,14 @@ function getBestMatch (newSurvey, friends) {
     return element === smallestTotal;
   }
   
+  console.log("what is friends", friends);
   for (var i=0; i < friends.length; i++) {
     var currentFriend = 0;
-  
-    for (var j=0; j < newSurvey.length; j++) {
-      currentFriend += Math.abs(friends[i].scores[j] - newSurvey.scores[j]);
-    }
     
+    for (let j=0; j < newSurvey.scores.length; j++) {
+      currentFriend += Math.abs(newSurvey.scores[j] - friends[i].scores[j]);
+    }
+
     matchResultsArray.push(currentFriend);
     console.log(matchResultsArray);
   }
@@ -66,14 +66,9 @@ router.get("/api/friends", function(req, res) {
 router.post("/api/friends", function(req, res) {
   var newSurvey = req.body;
   newSurvey.routeName = newSurvey.name.replace(/\s+/g, "").toLowerCase();
-  friends.push(newSurvey);
-
-  console.log('friends: ', friends);
-  console.log('newSurvey.scores: ', newSurvey.scores);
-  
-  var index = getBestMatch(newSurvey, friends);
-  
+  var index = getBestMatch(newSurvey, friends); // find best match
   res.send(friends[index]);
+  friends.push(newSurvey);
 
 });
 

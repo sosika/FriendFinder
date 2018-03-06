@@ -169,7 +169,7 @@
 
 <br><br>
 
-  <footer><a href="/api/friends">API Friend List</a> | <a href="">Github Repo</a></footer>
+  <footer><a href="/api/friends">API Friend List</a> | <a href="https://github.com/sosika/FriendFinder/tree/master">Github Repo</a></footer>
 </div>  
 
 
@@ -179,7 +179,6 @@
     jQuery.ajaxSettings.traditional = true;
 
     $("#submit").on("click", function(event) {
-      console.log('you clicked submit');
       event.preventDefault();
 
       var newSurvey = {
@@ -200,7 +199,7 @@
         ]
       };
       
-      console.log(newSurvey.scores);
+      console.log(newSurvey.scores.length);
 
       $.post("/api/friends", newSurvey)
       .then(function(data) {
